@@ -11,8 +11,15 @@ permalink: /postbacks
 Nossos Postbacks foram criados para ajudar desenvolvedores, produtores e empresas a consumir de nossos serviços e automatizar seus sistemas
 {: .fs-6 .fw-300 }
 
+## Começando
 
-## Modelos
+Resumo da documentação para utilizar os Postbacks da plataforma
+
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
 
 o primeiro passo e entender como é a estrutura dos postbacks
 no nossos postbacks contamos com a seguinte estrutura:
@@ -29,11 +36,11 @@ Cliente
 
 | Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                           |
 | :------------------ | ---------- | -------------- | ------------ | :---------------- | --------------------- | ------------------- | -------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [cart.schema.json\*](../out/cart.schema.json "open original schema") |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [cart.schema.json\*](cart.md "open original schema") |
 
 #### customer Type
 
-`object` ([Customer](cart-properties-customer.md))
+`object` ([Customer](cart.md))
 
 #### customer Constraints
 
@@ -81,8 +88,8 @@ The default value is:
 | [name](#name)         | `string` | Required | cannot be null | [XPague Recuperação de carrinho](cart-properties-customer-properties-name.md "\#/properties/customer/properties/name#/properties/customer/properties/name")          |
 | [docType](#docType)   | `string` | Required | cannot be null | [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/docType#/properties/customer/properties/docType") |
 | [doc](#doc)           | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/doc#/properties/customer/properties/doc")             |
-| [phone](#phone)       | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart-properties-customer-properties-phone.md "\#/properties/customer/properties/phone#/properties/customer/properties/phone")       |
-| [address](#address)   | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart-properties-customer-properties-address.md "\#/properties/customer/properties/address#/properties/customer/properties/address") |
+| [phone](#phone)       | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/phone#/properties/customer/properties/phone")       |
+| [address](#address)   | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/address#/properties/customer/properties/address") |
 | Additional Properties | Any      | Optional | can be null    |                                                                                                                                                                      |
 
 #### name
@@ -153,7 +160,7 @@ CPF formatado e CPF sem máscara
 
 `object` ([Doc](cart.md))
 
-### #doc Constraints
+#### doc Constraints
 
 **minimum number of properties**: the minimum number of properties for this object is: `0`
 
@@ -182,13 +189,13 @@ The default value is:
 `phone`
 
 -   is required
--   Type: `object` ([Phone](cart-properties-customer-properties-phone.md))
+-   Type: `object` ([Phone](cart.md))
 -   cannot be null
--   defined in: [XPague Recuperação de carrinho](cart-properties-customer-properties-phone.md "\#/properties/customer/properties/phone#/properties/customer/properties/phone")
+-   defined in: [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/phone#/properties/customer/properties/phone")
 
 #### phone Type
 
-`object` ([Phone](cart-properties-customer-properties-phone.md))
+`object` ([Phone](cart.md))
 
 #### phone Constraints
 
@@ -219,13 +226,13 @@ Objeto de endereço do cliente
 `address`
 
 -   is required
--   Type: `object` ([Address](cart-properties-customer-properties-address.md))
+-   Type: `object` ([Address](cart.md))
 -   cannot be null
--   defined in: [XPague Recuperação de carrinho](cart-properties-customer-properties-address.md "\#/properties/customer/properties/address#/properties/customer/properties/address")
+-   defined in: [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/address#/properties/customer/properties/address")
 
 #### address Type
 
-`object` ([Address](cart-properties-customer-properties-address.md))
+`object` ([Address](cart.md))
 
 #### address Constraints
 
