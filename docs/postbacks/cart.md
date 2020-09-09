@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Buttons
-parent: UI Components
+title: Cart
+parent: Postbacks
 nav_order: 2
 ---
 
