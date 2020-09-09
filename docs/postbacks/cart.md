@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Typography
-parent: UI Components
+title: Abandono de carrinho
+parent: Postbacks
 nav_order: 1
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: default
-title: UI Components
-nav_order: 3
+title: Postbacks
+nav_order: 1
 has_children: true
-permalink: /docs/ui-components
+permalink: /postbacks
 ---
 
 # UI Components
