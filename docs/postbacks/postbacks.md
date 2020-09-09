@@ -12,7 +12,7 @@ Nossos Postbacks foram criados para ajudar desenvolvedores, produtores e empresa
 {: .fs-6 .fw-300 }
 
 
-## Começando
+## Modelos
 
 o primeiro passo e entender como é a estrutura dos postbacks
 no nossos postbacks contamos com a seguinte estrutura:
@@ -74,18 +74,18 @@ The default value is:
 }
 ```
 
-### Customer Properties
+#### Customer Properties
 
 | Property              | Type     | Required | Nullable       | Defined by                                                                                                                                                           |
 | :-------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [name](#name)         | `string` | Required | cannot be null | [XPague Recuperação de carrinho](cart-properties-customer-properties-name.md "\#/properties/customer/properties/name#/properties/customer/properties/name")          |
-| [docType](#docType)   | `string` | Required | cannot be null | [XPague Recuperação de carrinho](cart-properties-customer-properties-doctype.md "\#/properties/customer/properties/docType#/properties/customer/properties/docType") |
-| [doc](#doc)           | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart-properties-customer-properties-doc.md "\#/properties/customer/properties/doc#/properties/customer/properties/doc")             |
+| [docType](#docType)   | `string` | Required | cannot be null | [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/docType#/properties/customer/properties/docType") |
+| [doc](#doc)           | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/doc#/properties/customer/properties/doc")             |
 | [phone](#phone)       | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart-properties-customer-properties-phone.md "\#/properties/customer/properties/phone#/properties/customer/properties/phone")       |
 | [address](#address)   | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart-properties-customer-properties-address.md "\#/properties/customer/properties/address#/properties/customer/properties/address") |
 | Additional Properties | Any      | Optional | can be null    |                                                                                                                                                                      |
 
-### name
+#### name
 
 Nome
 
@@ -119,13 +119,13 @@ Nome
 `docType`
 
 -   is required
--   Type: `string` ([Doctype](cart-properties-customer-properties-doctype.md))
+-   Type: `string` ([Doctype](cart.md))
 -   cannot be null
--   defined in: [XPague Recuperação de carrinho](cart-properties-customer-properties-doctype.md "\#/properties/customer/properties/docType#/properties/customer/properties/docType")
+-   defined in: [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/docType#/properties/customer/properties/docType")
 
 ### docType Type
 
-`string` ([Doctype](cart-properties-customer-properties-doctype.md))
+`string` ([Doctype](cart.md))
 
 ### docType Constraints
 
@@ -145,13 +145,13 @@ CPF formatado e CPF sem máscara
 `doc`
 
 -   is required
--   Type: `object` ([Doc](cart-properties-customer-properties-doc.md))
+-   Type: `object` ([Doc](cart.md))
 -   cannot be null
--   defined in: [XPague Recuperação de carrinho](cart-properties-customer-properties-doc.md "\#/properties/customer/properties/doc#/properties/customer/properties/doc")
+-   defined in: [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/doc#/properties/customer/properties/doc")
 
 #### doc Type
 
-`object` ([Doc](cart-properties-customer-properties-doc.md))
+`object` ([Doc](cart.md))
 
 ### #doc Constraints
 
