@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Início
+title: Home
 nav_order: 1
-description: "XPague Postbacks."
+description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
 permalink: /
 last_modified_date: 2020-04-27T17:54:08+0000
 ---
@@ -79,5 +79,3 @@ o delay para a transação ser entregue é de 3 minutos após a ação, a recupe
 
 ### Limites
 Nosso sistema aguarda 600 ms de resposta do servidor destino, caso o envio falhe o sistema tenta mais duas vezes entregar a webhook
-
- 
