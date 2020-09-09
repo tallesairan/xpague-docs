@@ -1,35 +1,65 @@
 ---
 layout: default
-title: Home
+title: Início
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "XPague Postbacks."
 permalink: /
 last_modified_date: 2020-04-27T17:54:08+0000
 ---
 
-# Focus on writing good documentation
+# XPague Postbacks
 {: .fs-9 }
+Documentação para auxiliar na implementação de integrações que são alimentadas através de postbacks
 
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
 {: .fs-6 .fw-300 }
 
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
-## Getting started
+## Começando
 
-### Dependencies
 
-Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special plugins and can run on GitHub Pages' standard Jekyll compiler. The [Jekyll SEO Tag plugin](https://github.com/jekyll/jekyll-seo-tag) is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit the [Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
+### Tipo do postback em objectType 
+É possível identificar o tipo do postback no campo "objectType" ele pode conter os valores  'transaction' ou 'cart' sendo cart para recuperação de carrinho e transaction para transações.
 
-### Quick start: Use as a GitHub Pages remote theme
 
-1. Add Just the Docs to your Jekyll site's `_config.yml` as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/)
-```yaml
-remote_theme: pmarsceill/just-the-docs
-```
-<small>You must have GitHub Pages enabled on your repo, one or more Markdown files, and a `_config.yml` file. [See an example repository](https://github.com/pmarsceill/jtd-remote)</small>
+### Schemas
+
+Url das schemas:
+[Cart](https://pagamento.xpague.com/core/postback-schema-cart.json), enviado no abandono.
+[Transaction](https://pagamento.xpague.com/core/postback-schema-transaction.json) enviado em transações.
+
+
+### Visualizando Schemas
+Caso queira visualizar as schemas online, utilize alguma das ferramentas abaixo
+[jsonschema]https://jsonschema.net ou
+[jsonviewer] https://codebeautify.org/jsonviewer/c6a219 para ver a schema.
+ é bem simples  basta copiar o conteúdo dela e colar para uma inspeção
+
+
+### Delays 
+o delay para a transação ser entregue é de 3 minutos após a ação, a recuperação de carrinho é enviada após 20 minutos
+
+
+### Status 
+Possíveis status
+"pending", "approved", "rejected", "in_process", "charged_back" 
+
+### Configurando Postbacks na plataforma
+A XPague trabalha com postbacks por produto, então você vai cadastrar no seu produto.
+Passos para ativar os postbacks no seu produto:
+1. Acesse seu produto
+2. Clique na aba Postbacks
+3. Clique no Botão "Novo Postback", cole a url desejada e clique em salvar.
+Pronto agora o sistema vai enviar postbacks para esse produto
+Caso queira verificar os postbacks também é enviado um header chamado "xpaguetoken" com o token único.
+<small>Você também pode testar suas webhooks, acesse  [Webhooks.site](https://webhook.site/)</small>
+
+
+
+### Limites
+Nosso sistema aguarda 600 ms de resposta do servidor destino, caso o envio falhe o sistema tenta mais duas vezes entregar a webhook
+
 
 ### Local installation: Use the gem-based theme
 
