@@ -20,7 +20,7 @@ Documentação para auxiliar na implementação de integrações que são alimen
 
 Resumo da documentação para utilizar os Postbacks da plataforma
 
-{: .no_toc .text-delta }
+{: .no_toc  }
 
 1. TOC
 {:toc}

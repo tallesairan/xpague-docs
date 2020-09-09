@@ -15,7 +15,7 @@ Nossos Postbacks foram criados para ajudar desenvolvedores, produtores e empresa
 
 Resumo da documentação para utilizar os Postbacks da plataforma
 
-{: .no_toc .text-delta }
+{: .no_toc  }
 
 1. TOC
 {:toc}
@@ -489,17 +489,17 @@ productThumbnail Examples
 -   cannot be null
 -   defined in: [XPague Recuperação de carrinho](cart-properties-objeto-do-produto-properties-total-do-produto-com-frete.md "\#/properties/product/properties/productTotal#/properties/product/properties/productTotal")
 
-### productTotal Type
+#### productTotal Type
 
 `string` ([Total do produto com frete](cart-properties-objeto-do-produto-properties-total-do-produto-com-frete.md))
 
-### productTotal Examples
+#### productTotal Examples
 
 ```json
 "349.00"
 ```
 
-## fillableUrl
+#### fillableUrl
 
 
 
@@ -520,4 +520,5 @@ fillableUrl Examples
 "https://pagamento.xpague.com/id/?src=postback&ct=36"
 ```
 
-3. ### Transaction
+
+2. ### Transaction
