@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Abandono
+title: Abandono de carrinho
+permalink: /postbacks/abandono
 parent: Postbacks
 nav_order: 4
 ---
