@@ -61,15 +61,15 @@ Exemplo da schema do postback de abandono
             "examples": [
                 {
                     "productShipping": "0",
-                    "productCover": "https://painel.xpague.com/app/uploads/2019/11/facereverse.png",
+                    "productCover": "https://painel.xpague.com/app/uploads/fb.png",
                     "productTotal": "349.00",
                     "fillableUrl": "https://pagamento.xpague.com/id/?src=postback&ct=36",
                     "productPrice": "349.00",
                     "id": 145720,
                     "checkoutId": 145622,
-                    "productName": "Femme Busto Kit 5",
+                    "productName": "FB Kit 5",
                     "description": "Creme para limpeza facial",
-                    "productThumbnail": "https://painel.xpague.com/app/uploads/2020/01/FemmeGel.png"
+                    "productThumbnail": "https://painel.xpague.com/app/uploads/fb.png"
                 }
             ],
             "required": [
@@ -101,7 +101,7 @@ Exemplo da schema do postback de abandono
                     "description": "Nome do produto.",
                     "default": "",
                     "examples": [
-                        "Femme Busto Kit 5"
+                        "FB Kit 5"
                     ]
                 },
                 "description": {
@@ -141,7 +141,7 @@ Exemplo da schema do postback de abandono
                     "description": "",
                     "default": "",
                     "examples": [
-                        " https://painel.xpague.com/app/uploads/2020/01/FemmeGeFl.png"
+                        "https://painel.xpague.com/app/uploads/fb.png"
                     ]
                 },
                 "productThumbnail": {
@@ -151,7 +151,7 @@ Exemplo da schema do postback de abandono
                     "description": "",
                     "default": "",
                     "examples": [
-                        " https://painel.xpague.com/app/uploads/2020/01/FemmeGeFl.png"
+                        "https://painel.xpague.com/app/uploads/fb.png"
                     ]
                 },
                 "productTotal": {
