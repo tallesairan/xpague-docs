@@ -17,474 +17,281 @@ nav_order: 4
 
 ---
 
-## Font stack
+## Abandono de carrinho
 
-By default, Just the Docs uses a native system font stack for sans-serif fonts:
 
+
+ Duas schemas responsáveis pela estrutura do abandono de carrinho
+
+1. ### Customer Schema 
+
+Dados do cliente, usados em transações e recuperação de carrinho
+
+
+```txt
+    #/properties/customer#/properties/customer
+```
+
+Cliente
  
+ 
+ customer Examples
+
+```json
+{
+  "doc": {
+    "raw": "00000000000",
+    "formatted": "000.000.000-00"
+  },
+  "phone": {
+    "formatted": "(21) 00000-0000",
+    "raw": "21000000000"
+  },
+  "address": {
+    "complementary": "",
+    "city": "Nilópolis",
+    "country": "br",
+    "state": "RJ",
+    "address": "Estrada Mirandela",
+    "neighborhood": "Centro",
+    "zipcode": "26520332",
+    "number": "700"
+  },
+  "docType": "cpf",
+  "name": "María Aparecida Murce"
+}
+```
+
+ Customer Properties
+
+| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                                           |
+| :-------------------- | -------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [name](#name)         | `string` | Required | cannot be null | [XPague Recuperação de carrinho](cart-properties-customer-properties-name.md "\#/properties/customer/properties/name#/properties/customer/properties/name")          |
+| [docType](#docType)   | `string` | Required | cannot be null | [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/docType#/properties/customer/properties/docType") |
+| [doc](#doc)           | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/doc#/properties/customer/properties/doc")             |
+| [phone](#phone)       | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/phone#/properties/customer/properties/phone")       |
+| [address](#address)   | `object` | Required | cannot be null | [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/address#/properties/customer/properties/address") |
+| Additional Properties | Any      | Optional | can be null    |                                                                                                                                                                      |
+
+#### name
+
+Nome
 
 
- ## Schema
+`name`
+
+-   is required
+-   Type: `string` ([Name](cart-properties-customer-properties-name.md))
+-   cannot be null
+-   defined in: [XPague Recuperação de carrinho](cart-properties-customer-properties-name.md "\#/properties/customer/properties/name#/properties/customer/properties/name")
+
+name Type
+
+`string` ([Name](cart-properties-customer-properties-name.md))
+
+name Constraints
+
+**minimum length**: the minimum number of characters for this string is: `0`
+
+name Examples
+
+```json
+"María Teste Teste"
+```
+
+#### docType
+
+.
+
+
+`docType`
+
+-   is required
+-   Type: `string` ([Doctype](cart.md))
+-   cannot be null
+-   defined in: [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/docType#/properties/customer/properties/docType")
+
+docType Type
+
+`string` ([Doctype](cart.md))
+
+docType Constraints
+
+**minimum length**: the minimum number of characters for this string is: `1`
+
+docType Examples
+
+```json
+"cpf"
+```
+
+#### doc
+CPF formatado e CPF sem máscara
+
+
+`doc`
+
+-   is required
+-   Type: `object` ([Doc](cart.md))
+-   cannot be null
+-   defined in: [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/doc#/properties/customer/properties/doc")
+
+#### doc Type
+
+`object` ([Doc](cart.md))
+
+doc Constraints
+
+**minimum number of properties**: the minimum number of properties for this object is: `0`
+
+doc Default Value
+
+The default value is:
+
+```json
+{}
+```
+
+doc Examples
+
+```json
+{
+  "formatted": "000.000.000-00",
+  "raw": "00000000000"
+}
+```
+
+#### phone
+
+.
+
+
+`phone`
+
+-   is required
+-   Type: `object` ([Phone](cart.md))
+-   cannot be null
+-   defined in: [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/phone#/properties/customer/properties/phone")
+
+ phone Type
+
+`object` ([Phone](cart.md))
+
+ phone Constraints
+
+**minimum number of properties**: the minimum number of properties for this object is: `0`
+
+ phone Default Value
+
+The default value is:
+
+```json
+{}
+```
+
+ phone Examples
+
+```json
+{
+  "formatted": "(21) 00000-0000",
+  "raw": "21000000000"
+}
+```
+
+#### address
+
+Objeto de endereço do cliente
+
+
+`address`
+
+-   is required
+-   Type: `object` ([Address](cart.md))
+-   cannot be null
+-   defined in: [XPague Recuperação de carrinho](cart.md "\#/properties/customer/properties/address#/properties/customer/properties/address")
+
+address Type
+
+`object` ([Address](cart.md))
+
+address Constraints
+
+**minimum number of properties**: the minimum number of properties for this object is: `0`
+
+address Default Value
+
+The default value is:
+
+```json
+{}
+```
+
+address Examples
+
+```json
+{
+  "complementary": "",
+  "city": "Nilópolis",
+  "country": "br",
+  "state": "RJ",
+  "address": "Estrada Mirandela",
+  "neighborhood": "Centro",
+  "zipcode": "26520332",
+  "number": "700"
+}
+```
+
+2. ### Product Schema
+
+
+ ## Exemplo
 
 Exemplo da schema do postback de abandono
 
 ```json
 
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://painel.xpague.com/postback-schema-cart.json",
-    "type": "object",
-    "title": "XPague Recuperação de carrinho",
-    "description": "Schema recuperação de carrinho.",
-    "required": [
-        "objectType",
-        "product",
-        "customer"
-    ],
-    "properties": {
-        "objectType": {
-            "$id": "#/properties/objectType",
-            "type": "string",
-            "title": "Tipo de postback",
-            "description": "na recuperação o tipo tem que ser cart.",
-            "default": "",
-            "examples": [
-                "cart"
-            ]
-        },
-        "product": {
-            "$id": "#/properties/product",
-            "type": "object",
-            "title": "Objeto do produto",
-            "description": "",
-            "default": {},
-            "examples": [
-                {
-                    "productShipping": "0",
-                    "productCover": "https://painel.xpague.com/app/uploads/fb.png",
-                    "productTotal": "349.00",
-                    "fillableUrl": "https://pagamento.xpague.com/id/?src=postback&ct=36",
-                    "productPrice": "349.00",
-                    "id": 145720,
-                    "checkoutId": 145622,
-                    "productName": "FB Kit 5",
-                    "description": "Creme para limpeza facial",
-                    "productThumbnail": "https://painel.xpague.com/app/uploads/fb.png"
-                }
-            ],
-            "required": [
-                "id",
-                "productName",
-                "description",
-                "productPrice",
-                "productShipping",
-                "productCover",
-                "productThumbnail",
-                "productTotal",
-                "fillableUrl"
-            ],
-            "properties": {
-                "id": {
-                    "$id": "#/properties/product/properties/id",
-                    "type": "integer",
-                    "title": "The Id Schema",
-                    "description": "ID do produto.",
-                    "default": 0,
-                    "examples": [
-                        145720
-                    ]
-                },
-                "productName": {
-                    "$id": "#/properties/product/properties/productName",
-                    "type": "string",
-                    "title": "Nome do produto",
-                    "description": "Nome do produto.",
-                    "default": "",
-                    "examples": [
-                        "FB Kit 5"
-                    ]
-                },
-                "description": {
-                    "$id": "#/properties/product/properties/description",
-                    "type": "string",
-                    "title": "Descrição do produto",
-                    "description": "Descrição do produto",
-                    "default": "",
-                    "examples": [
-                        "Creme para limpeza facial"
-                    ]
-                },
-                "productPrice": {
-                    "$id": "#/properties/product/properties/productPrice",
-                    "type": "string",
-                    "title": "Preço do produto",
-                    "description": "Preço do produto.",
-                    "default": "",
-                    "examples": [
-                        "349.00"
-                    ]
-                },
-                "productShipping": {
-                    "$id": "#/properties/product/properties/productShipping",
-                    "type": "string",
-                    "title": "Preço do frete",
-                    "description": "Preço do frete",
-                    "default": "",
-                    "examples": [
-                        "0"
-                    ]
-                },
-                "productCover": {
-                    "$id": "#/properties/product/properties/productCover",
-                    "type": "string",
-                    "title": "Imagem de capa",
-                    "description": "",
-                    "default": "",
-                    "examples": [
-                        "https://painel.xpague.com/app/uploads/fb.png"
-                    ]
-                },
-                "productThumbnail": {
-                    "$id": "#/properties/product/properties/productThumbnail",
-                    "type": "string",
-                    "title": "Thumbnail do produto",
-                    "description": "",
-                    "default": "",
-                    "examples": [
-                        "https://painel.xpague.com/app/uploads/fb.png"
-                    ]
-                },
-                "productTotal": {
-                    "$id": "#/properties/product/properties/productTotal",
-                    "type": "string",
-                    "title": "Total do produto com frete",
-                    "description": "",
-                    "default": "",
-                    "examples": [
-                        "349.00"
-                    ]
-                },
-                "fillableUrl": {
-                    "$id": "#/properties/product/properties/fillableUrl",
-                    "type": "string",
-                    "title": "The Fillableurl Schema",
-                    "description": "",
-                    "default": "",
-                    "examples": [
-                        "https://pagamento.xpague.com/id/?src=postback&ct=36"
-                    ]
-                }
-            }
-        },
-        "customer": {
-            "$id": "#/properties/customer",
-            "type": "object",
-            "readOnly": false,
-            "writeOnly": false,
-            "minProperties": 0,
-            "title": "Customer",
-            "description": "Cliente",
-            "default": {},
-            "examples": [
-                {
-                    "doc": {
-                        "raw": "00000000000",
-                        "formatted": "000.000.000-00"
-                    },
-                    "phone": {
-                        "formatted": "(21) 00000-0000",
-                        "raw": "21000000000"
-                    },
-                    "address": {
-                        "complementary": "",
-                        "city": "Nilópolis",
-                        "country": "br",
-                        "state": "RJ",
-                        "address": "Estrada Mirandela",
-                        "neighborhood": "Centro",
-                        "zipcode": "26520332",
-                        "number": "700"
-                    },
-                    "docType": "cpf",
-                    "name": "María Aparecida Murce"
-                }
-            ],
-            "additionalProperties": true,
-            "required": [
-                "name",
-                "docType",
-                "doc",
-                "phone",
-                "address"
-            ],
-            "properties": {
-                "name": {
-                    "$id": "#/properties/customer/properties/name",
-                    "type": "string",
-                    "readOnly": false,
-                    "writeOnly": false,
-                    "minLength": 0,
-                    "title": "Name",
-                    "description": "Nome",
-                    "default": "",
-                    "examples": [
-                        "María Teste Teste"
-                    ]
-                },
-                "docType": {
-                    "$id": "#/properties/customer/properties/docType",
-                    "type": "string",
-                    "readOnly": false,
-                    "writeOnly": false,
-                    "minLength": 0,
-                    "title": "Doctype",
-                    "description": ".",
-                    "default": "",
-                    "examples": [
-                        "cpf"
-                    ]
-                },
-                "doc": {
-                    "$id": "#/properties/customer/properties/doc",
-                    "type": "object",
-                    "readOnly": false,
-                    "writeOnly": false,
-                    "minProperties": 0,
-                    "title": "Doc",
-                    "description": "CPF formatado e CPF sem máscara",
-                    "default": {},
-                    "examples": [
-                        {
-                            "formatted": "000.000.000-00",
-                            "raw": "00000000000"
-                        }
-                    ],
-                    "additionalProperties": true,
-                    "required": [
-                        "raw",
-                        "formatted"
-                    ],
-                    "properties": {
-                        "raw": {
-                            "$id": "#/properties/customer/properties/doc/properties/raw",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "Raw",
-                            "description": ".",
-                            "default": "",
-                            "examples": [
-                                "00000000000"
-                            ]
-                        },
-                        "formatted": {
-                            "$id": "#/properties/customer/properties/doc/properties/formatted",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "Formatted",
-                            "description": ".",
-                            "default": "",
-                            "examples": [
-                                "000.000.000-00"
-                            ]
-                        }
-                    }
-                },
-                "phone": {
-                    "$id": "#/properties/customer/properties/phone",
-                    "type": "object",
-                    "readOnly": false,
-                    "writeOnly": false,
-                    "minProperties": 0,
-                    "title": "Phone",
-                    "description": ".",
-                    "default": {},
-                    "examples": [
-                        {
-                            "formatted": "(21) 00000-0000",
-                            "raw": "21000000000"
-                        }
-                    ],
-                    "additionalProperties": true,
-                    "required": [
-                        "raw",
-                        "formatted"
-                    ],
-                    "properties": {
-                        "raw": {
-                            "$id": "#/properties/customer/properties/phone/properties/raw",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "Raw",
-                            "description": ".",
-                            "default": "",
-                            "examples": [
-                                "21000000000"
-                            ]
-                        },
-                        "formatted": {
-                            "$id": "#/properties/customer/properties/phone/properties/formatted",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "Formatted",
-                            "description": ".",
-                            "default": "",
-                            "examples": [
-                                "(21) 00000-0000"
-                            ]
-                        }
-                    }
-                },
-                "address": {
-                    "$id": "#/properties/customer/properties/address",
-                    "type": "object",
-                    "readOnly": false,
-                    "writeOnly": false,
-                    "minProperties": 0,
-                    "title": "Address",
-                    "description": "Objeto de endereço do cliente",
-                    "default": {},
-                    "examples": [
-                        {
-                            "complementary": "",
-                            "city": "Nilópolis",
-                            "country": "br",
-                            "state": "RJ",
-                            "address": "Estrada Mirandela",
-                            "neighborhood": "Centro",
-                            "zipcode": "26520332",
-                            "number": "700"
-                        }
-                    ],
-                    "additionalProperties": true,
-                    "required": [
-                        "address",
-                        "number",
-                        "complementary",
-                        "neighborhood",
-                        "zipcode",
-                        "city",
-                        "state",
-                        "country"
-                    ],
-                    "properties": {
-                        "address": {
-                            "$id": "#/properties/customer/properties/address/properties/address",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "Address",
-                            "description": "endereço linha 1",
-                            "default": "",
-                            "examples": [
-                                "Estrada Mirandela"
-                            ]
-                        },
-                        "number": {
-                            "$id": "#/properties/customer/properties/address/properties/number",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "Number",
-                            "description": "Número",
-                            "default": "",
-                            "examples": [
-                                "700",
-                                "S/N"
-                            ]
-                        },
-                        "complementary": {
-                            "$id": "#/properties/customer/properties/address/properties/complementary",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "Complementary",
-                            "description": "Complemento",
-                            "default": "",
-                            "examples": [
-                                "Casa 01"
-                            ]
-                        },
-                        "neighborhood": {
-                            "$id": "#/properties/customer/properties/address/properties/neighborhood",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "Neighborhood",
-                            "description": "Bairro",
-                            "default": "",
-                            "examples": [
-                                "Centro"
-                            ]
-                        },
-                        "zipcode": {
-                            "$id": "#/properties/customer/properties/address/properties/zipcode",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "Zipcode",
-                            "description": "CEP",
-                            "default": "",
-                            "examples": [
-                                "26520332"
-                            ]
-                        },
-                        "city": {
-                            "$id": "#/properties/customer/properties/address/properties/city",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "City",
-                            "description": "Cidade",
-                            "default": "",
-                            "examples": [
-                                "Nilópolis"
-                            ]
-                        },
-                        "state": {
-                            "$id": "#/properties/customer/properties/address/properties/state",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "State",
-                            "description": "Estado",
-                            "default": "",
-                            "examples": [
-                                "RJ"
-                            ]
-                        },
-                        "country": {
-                            "$id": "#/properties/customer/properties/address/properties/country",
-                            "type": "string",
-                            "readOnly": false,
-                            "writeOnly": false,
-                            "minLength": 0,
-                            "title": "Country",
-                            "description": ".",
-                            "default": "",
-                            "examples": [
-                                "br"
-                            ]
-                        }
-                    }
-                }
-            }
-        }
-    }
+  "objectType": "cart",
+  "id": "124016",
+  "product": {
+    "id": 185917,
+    "checkoutId": "145694",
+    "productName": "fb 1",
+    "description": "fb 1",
+    "productPrice": "189.00",
+    "productShipping": 0,
+    "productCover": "https://static.xpague.com/fb111x3.jpg",
+    "productThumbnail": null,
+    "productTotal": "189.00",
+    "fillableUrl": "https://pagamento.xpague.com/id/185917?ct=124016", /// url de checkout com as informações preenchidas
+    "productUrl": "https://pagamento.xpague.com/id/185917" // url do produto
+  },
+  "customer": {
+    "name": "lorem ipsum dolor",
+    "email": "loremips@gmail.com",
+    "docType": "cpf",
+    "doc": {
+      "raw": "12345649728",
+      "formatted": "123.456.497-28"
+    },
+    "phone": {
+      "raw": "22988718452",
+      "formatted": "(22) 98871-8452"
+    },
+    "address": {
+      "address": "XXXX",
+      "number": "651",
+      "complementary": "XXXXX",
+      "neighborhood": "XXXXXX",
+      "zipcode": "23520560",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "country": "br"
+    },
+    "token": "a232029d793fe70bd956155a347a5037"
+  },
+  "dateQueued": "2020-09-11 02:28:09",
+  "dateCreated": "2020-09-11 02:05:23",
+  "dateUpdated": "2020-09-11 02:05:23"
 }
-
 ```

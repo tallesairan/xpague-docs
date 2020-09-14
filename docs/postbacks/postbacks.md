@@ -24,8 +24,10 @@ Resumo da documentação para utilizar os Postbacks da plataforma
 o primeiro passo e entender como é a estrutura dos postbacks
 no nossos postbacks contamos com a seguinte estrutura:
 
+1. ## Abandono de carrinho
+Duas schemas responsáveis pela estrutura do abandono de carrinho
 
-1. ## Customer Schema 
+1. ### Customer Schema 
 
 Dados do cliente, usados em transações e recuperação de carrinho
 
@@ -243,7 +245,7 @@ address Examples
 }
 ```
 
-2. ## Product Schema
+2. ### Product Schema
 
 propriedades do produto, usadas em transações em recuperação de carrinho
 
@@ -334,11 +336,11 @@ Nome do produto.
 -   cannot be null
 -   defined in: [XPague Recuperação de carrinho](cart-properties-objeto-do-produto-properties-nome-do-produto.md "\#/properties/product/properties/productName#/properties/product/properties/productName")
 
-### productName Type
+productName Type
 
 `string` ([Nome do produto](cart-properties-objeto-do-produto-properties-nome-do-produto.md))
 
-### productName Examples
+productName Examples
 
 ```json
 "Femme Busto Kit 5"
@@ -413,8 +415,6 @@ productShipping Examples
 #### productCover
 
 
-
-
 `productCover`
 
 -   is required
@@ -475,19 +475,18 @@ ProductTotal Type
 
 #### fillableUrl
 
-
-
+url do checkout preenchido
 
 `fillableUrl`
 
 -   is required
--   Type: `string` ([The Fillableurl Schema](transaction.md))
+-   Type: `string` ([The Fillableurl Schema](cart.md))
 -   cannot be null
--   defined in: [XPague Recuperação de carrinho](transaction.md "\#/properties/product/properties/fillableUrl#/properties/product/properties/fillableUrl")
+-   defined in: [XPague Recuperação de carrinho](cart.md "\#/properties/product/properties/fillableUrl#/properties/product/properties/fillableUrl")
 
 fillableUrl Type
 
-`string` ([The Fillableurl Schema](transaction.md))
+`string` ([The Fillableurl Schema](cart.md))
 
 fillableUrl Examples
 
