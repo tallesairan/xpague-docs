@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Transações
-permalink: /postbacks/transacoes
+permalink: /postbacks/transaction
 parent: Postbacks
 nav_order: 5
 ---

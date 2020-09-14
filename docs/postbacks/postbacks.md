@@ -1117,6 +1117,10 @@ billetExpire Examples
 "2020-03-23 03:00:00"
 ```
 
+
+
+
+
 ### qualquer dúvida abra um ticket na plataforma
 
 [XPague Suporte](https://painel.xpague.com/suporte/tickets/#!cnr)
