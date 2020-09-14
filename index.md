@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Home
+title: Dev Docs
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "XPague DevDocs."
 permalink: /
 last_modified_date: 2020-04-27T17:54:08+0000
 ---
 
 # XPague Postbacks
 {: .fs-9 }
-Documentação para auxiliar na implementação de integrações que são alimentadas através de postbacks
+Documentação para auxiliar em integrações que usam nossos postbacks
 
 {: .fs-6 .fw-300 }
 
@@ -79,3 +79,8 @@ o delay para a transação ser entregue é de 3 minutos após a ação, a recupe
 
 ### Limites
 Nosso sistema aguarda 600 ms de resposta do servidor destino, caso o envio falhe o sistema tenta mais duas vezes entregar a webhook
+
+### Endereços IP
+Nossas requisições são enviadas através do ip:
+*** 68.183.158.198 ***
+*** 14061 DIGITALOCEAN-ASN ***
