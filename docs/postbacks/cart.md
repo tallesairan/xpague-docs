@@ -3,7 +3,7 @@ layout: default
 title: Abandono de carrinho
 permalink: /postbacks/abandono
 parent: Postbacks
-nav_order: 4
+nav_order: 3
 ---
 
 # Typography
