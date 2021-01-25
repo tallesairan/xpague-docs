@@ -57,7 +57,7 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Cadastrar":
-    - "https://painel.xpague.com/login#cadastrar"
+    - "https://painel.xpague.com/login#register"
   "Login":
     - "https://painel.xpague.com/login"    
 

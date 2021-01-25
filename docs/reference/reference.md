@@ -2,7 +2,7 @@
 layout: default
 title: Referência de api
 nav_order: 2
-has_children: true
+has_children: false
 permalink: /reference
 ---
 # Referência

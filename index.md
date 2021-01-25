@@ -10,7 +10,7 @@ last_modified_date: 2020-04-27T17:54:08+0000
 
 # XPague Dev Docs
 {: .fs-9 }
-Referência de api para ajudar nas automações de integrações.
+Referência de api para ajudar em automações de integrações.
 
 ---
 
