@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Postbacks
-nav_order: 2
+parent: reference
+
+nav_order: 3
 has_children: true
-permalink: /postbacks
+permalink: /reference/postbacks
 ---
 
 # Postbacks
@@ -14,6 +16,9 @@ Nossos Postbacks foram criados para ajudar desenvolvedores, produtores e empresa
 ## Começando
 
 Resumo da documentação para utilizar os Postbacks da plataforma
+
+
+### Conteúdo
 
 {: .no_toc  }
 
@@ -1121,6 +1126,6 @@ billetExpire Examples
 
 
 
-### qualquer dúvida abra um ticket na plataforma
+#### Qualquer dúvida abra um ticket na plataforma
 
 [XPague Suporte](https://painel.xpague.com/suporte/tickets/#!cnr)

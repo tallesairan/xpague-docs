@@ -59,7 +59,7 @@ Caso queira verificar os postbacks também é enviado um header chamado "xpaguet
 <small>Você também pode testar seus postbacks, acesse  [Webhooks.site](https://webhook.site/)</small>
 
 
-### Schemas
+###  Schemas
 
 Url das schemas:
 1. [Cart](https://pagamento.xpague.com/core/postback-schema-cart.json) enviado no abandono.

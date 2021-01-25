@@ -1,25 +1,18 @@
 ---
 layout: default
 title: Transações
-permalink: /postbacks/transaction
+permalink: /reference/postbacks/transaction
 parent: Postbacks
-nav_order: 4
+nav_order: 5
 ---
 
 # Transações
 Schema e Exemplos do postback de transação
+
+### Objetos
 {: .no_toc }
 
-## Table of contents
-{: .no_toc }
-
-1. TOC
-{:toc}
-
----
-
-
-1. ## Transaction
+ 
 
 Transação Schema
 
