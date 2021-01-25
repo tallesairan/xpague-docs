@@ -7,7 +7,7 @@ permalink: /reference
 ---
 # Referência
 
-Referência de api para automatizar suas integrações.
+Referência de api para auxiliar nas automações de integrações.
 
 ## Postbacks
 

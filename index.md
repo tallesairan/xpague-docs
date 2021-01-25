@@ -7,7 +7,14 @@ permalink: /
 last_modified_date: 2020-04-27T17:54:08+0000
 ---
 
-# XPague Postbacks
+
+# XPague Dev Docs
+{: .fs-9 }
+Referência de api para ajudar nas automações de integrações.
+
+---
+
+## XPague Postbacks
 {: .fs-9 }
 Documentação para auxiliar em integrações que usam nossos postbacks
 
@@ -16,7 +23,7 @@ Documentação para auxiliar em integrações que usam nossos postbacks
 
 ---
 
-## Começando
+#### Começando
 
 Resumo da documentação para utilizar os Postbacks da plataforma
 
@@ -26,22 +33,22 @@ Resumo da documentação para utilizar os Postbacks da plataforma
 {:toc}
 
 
-### Tipo do Postback em objectType 
+#### Tipo do Postback em objectType 
 É possível identificar o tipo do postback no campo "objectType" ele pode conter os valores  'transaction' ou 'cart' sendo cart para recuperação de carrinho e transaction para transações.
 
 
-### Métodos de pagamento 
+#### Métodos de pagamento 
 Possíveis valores
 "credit", "billet" 
 
 
-### Status 
+#### Status 
 Possíveis status
 "pending", "approved", "rejected", "in_process", "charged_back" 
 
 
 
-### Configurando Postbacks na plataforma
+#### Configurando Postbacks na plataforma
 
 A XPague trabalha com postbacks por produto, então você vai cadastrar no seu produto.
 Passos para ativar os postbacks no seu produto:
