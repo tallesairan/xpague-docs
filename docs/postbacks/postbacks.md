@@ -1,11 +1,9 @@
 ---
 layout: default
 title: Postbacks
-parent: Reference
-
-nav_order: 1
+nav_order: 3
 has_children: true
-permalink: /reference/postbacks
+permalink: /postbacks
 ---
 
 # Postbacks

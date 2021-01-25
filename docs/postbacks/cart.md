@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Abandono de carrinho
-permalink: /reference/postbacks/cart
+permalink: /postbacks/cart
 parent: Postbacks
-nav_order: 2
+nav_order: 5
 ---
 
 ## Objetos
