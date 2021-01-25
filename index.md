@@ -4,7 +4,7 @@ title: Dev Docs
 nav_order: 1
 description: "XPague DevDocs."
 permalink: /
-last_modified_date: 2020-04-27T17:54:08+0000
+last_modified_date: 2021-01-21T17:54:08+0000
 ---
 
 
@@ -17,14 +17,7 @@ Referência de api para ajudar em automações de integrações.
 ## XPague Postbacks
 {: .fs-9 }
 Documentação para auxiliar em integrações que usam nossos Postbacks
-
-{: .fs-6 .fw-300 }
-
-
----
-
-#### Começando
-
+Começando
 Resumo da Documentação para utilizar os Postbacks da plataforma
 
 {: .no_toc  }
