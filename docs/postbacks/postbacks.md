@@ -11,16 +11,11 @@ permalink: /postbacks
 Nossos Postbacks foram criados para ajudar desenvolvedores, produtores e empresas a consumir de nossos serviços e automatizar seus sistemas
 {: .fs-6 .fw-300 }
 
-## Começando
 
-Resumo da documentação para utilizar os Postbacks da plataforma
-
-
-### Conteúdo
 
 {: .no_toc  }
 
-1. TOC
+1. Conteúdo
 {:toc}
 
 

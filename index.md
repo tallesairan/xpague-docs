@@ -16,7 +16,7 @@ Referência de api para ajudar em automações de integrações.
 
 ## XPague Postbacks
 {: .fs-9 }
-Documentação para auxiliar em integrações que usam nossos postbacks
+Documentação para auxiliar em integrações que usam nossos Postbacks
 
 {: .fs-6 .fw-300 }
 
@@ -25,7 +25,7 @@ Documentação para auxiliar em integrações que usam nossos postbacks
 
 #### Começando
 
-Resumo da documentação para utilizar os Postbacks da plataforma
+Resumo da Documentação para utilizar os Postbacks da plataforma
 
 {: .no_toc  }
 
@@ -34,7 +34,7 @@ Resumo da documentação para utilizar os Postbacks da plataforma
 
 
 #### Tipo do Postback em objectType 
-É possível identificar o tipo do postback no campo "objectType" ele pode conter os valores  'transaction' ou 'cart' sendo cart para recuperação de carrinho e transaction para transações.
+É possível identificar o tipo do postback no campo "objectType" ele pode conter os valores  'Transaction' ou 'cart' sendo cart para recuperação de carrinho e transaction para transações.
 
 
 #### Métodos de pagamento 
