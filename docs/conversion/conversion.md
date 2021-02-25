@@ -5,13 +5,12 @@ nav_order: 6
 has_children: true
 permalink: /conversion
 ---
-##  Conversão
-
- Facebook Pixel Para domínios confirmados
+## Conversão
+Guia para implementar o pixel do facebook em domínios confirmados
 
 ### Guia simples para implementação dessa nova estratégia.
 
-    Após uma mudança recente o facebook infelizmente só passou a aceitar  eventos de domínios confirmados
+Após uma mudança recente no pixel do facebook em navegadores, infelizmente só passou a aceitar  eventos de domínios confirmados, caso queira usar a api de eventos do facebook [clique aqui para acessar o guia]({% link docs/conversion/api.md %})
 
 ## Como instalar o código do pixel ?
 

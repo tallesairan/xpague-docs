@@ -12,8 +12,7 @@ Guia para implementar o pixel do facebook em domínios confirmados
 
 ### Guia simples para implementação dessa nova estratégia.
 
-    Após uma mudança recente no pixel do facebook em navegadores, infelizmente só passou a aceitar  eventos de domínios confirmados
- caso queira usar a api de eventos do facebook clique aqui 
+Após uma mudança recente no pixel do facebook em navegadores, infelizmente só passou a aceitar  eventos de domínios confirmados, caso queira usar a api de eventos do facebook [clique aqui para acessar o guia]({% link docs/conversion/api.md %})
 
 ## Como instalar o código do pixel ?
 
