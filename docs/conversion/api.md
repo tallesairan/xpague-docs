@@ -58,7 +58,7 @@ Saiba mais em: [Guia domínios confirmados Facebook]({% link docs/conversion/fac
 
 ### Configurando em campanhas (afiliado e produtor)
 
-* Ao clicar no botão será gerado um código que não será salvo pelo Facebook, portanto copie o conteúdo e em seguida na página do produto, vá em Campanhas, escolha a campanha e clique em Editar, ou na hora de criar sua campanha insira o token
+* Ao clicar no botão será gerado um código que não será salvo pelo Facebook, portanto copie o conteúdo e em seguida na página do produto, vá em Campanhas, escolha a campanha e clique em Editar, ou na hora de criar sua campanha insira o token, caso não esteja vendo o campo do token, clique no botão "Ver opções avançadas"
 
 ### Configurando direto no produto (produtor)
 
