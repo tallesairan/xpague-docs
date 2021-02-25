@@ -22,7 +22,7 @@ Os eventos do servidor são vinculados a um pixel e são processados como evento
 
 Isso significa que os eventos do servidor são usados na medição, relatório e otimização da mesma forma que os eventos de pixel do navegador.
 
-## Por que isso é necessário agora?
+### Por que isso é necessário agora?
 
 Com as atualizações do IOS 14 um anunciante não pode mais registrar eventos de domínios que ele não tem permissão.
 
