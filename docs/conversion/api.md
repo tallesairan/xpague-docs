@@ -6,19 +6,23 @@ parent: Conversão
 has_children: false
 permalink: /conversion/facebook-events-api
 ---
-## API de eventos Facebook
 
-Instalando Pixel do Facebook na XPague usando a API de eventos do Facebook
+# API de eventos Facebook
 
+Instalando Pixel do Facebook na XPague utilizando a API de eventos do Facebook
 
-### o que é a api de eventos do Facebook ?
+{: .no_toc  }
+
+1. Conteúdo
+{:toc}
+## O que é a api de eventos do Facebook ?
 A  API de conversão permite que os anunciantes enviem eventos da web de seus servidores diretamente para o Facebook. 
 
 Os eventos do servidor são vinculados a um pixel e são processados como eventos de pixel do navegador. 
 
 Isso significa que os eventos do servidor são usados na medição, relatório e otimização da mesma forma que os eventos de pixel do navegador.
 
-### Por que isso é necessário agora?
+## Por que isso é necessário agora?
 
 Com as atualizações do IOS 14 um anunciante não pode mais registrar eventos de domínios que ele não tem permissão.
 
@@ -37,7 +41,7 @@ para seu pixel, mesmo que você não tenha como verificar o domínio.
 Saiba mais em: [Guia domínios confirmados Facebook]({% link docs/conversion/facebook.md %})
  
  
-Para dar a permissão do domínio da XPague é bem simples, confira os passos:          
+## Para dar a permissão do domínio da XPague é bem simples, confira os passos:          
 
 1. Primeiramente, acesse a página do facebook business e efetue o login em sua conta.         
 
@@ -61,11 +65,18 @@ Com essa regra o pixel fica inserido no produto, quando você realizar uma venda
 
 * Ao clicar no botão será gerado um código que não será salvo pelo Facebook, portanto copie o conteúdo e em seguida na página do produto, vá em Checkout, abaixe a página você vai ver dois campos (Pixel de trackeamento facebook e Token de acesso da API de conversões do Facebook, insira o pixel e o token e pronto.
 
-Posso usar dois pixels ou mais como produtor ? **SIM**
+## Posso usar dois pixels ou mais como produtor ? 
 
-Basta inserir uma vírgula separando seus pixels, lembrando que o token do pixel precisa ser separado por vírgulas também e na mesma ordem de inserção dos pixel
+**SIM** ! Basta inserir uma vírgula separando seus pixels, lembrando que o token do pixel precisa ser separado por vírgulas também e na mesma ordem de inserção dos pixel
+
+Se você inseriu dois pixel eles devem estar separados por vírgulas e os tokens na mesma ordem, Exemplo: 
+```
+
+Pixel: 999992,999993
+Tokens: token999992,token999993
+
+```
 
 
-
-### Precisa de alguma ajuda?
+## Precisa de alguma ajuda?
 Estamos prontos para ajudar, basta enviar um ticket na plataforma será um prazer atende-lo
