@@ -41,19 +41,20 @@ para seu pixel, mesmo que você não tenha como verificar o domínio.
 Saiba mais em: [Guia domínios confirmados Facebook]({% link docs/conversion/facebook.md %})
  
  
-## Para dar a permissão do domínio da XPague é bem simples, confira os passos:          
+### Para dar a permissão do domínio da XPague é bem simples, confira os passos:          
 
-1. Primeiramente, acesse a página do facebook business e efetue o login em sua conta.         
+* Primeiramente, acesse a página do facebook business e efetue o login em sua conta.         
 
-2. No menu principal, em configurações do negócio acesse Fonte de dados » Pixels.
+* No menu principal, em configurações do negócio acesse Fonte de dados » Pixels.
 
-3. Então, clique em Abrir no Gerenciador de Eventos localizado no canto superior direito.
+* Então, clique em Abrir no Gerenciador de Eventos localizado no canto superior direito.
 
-4. Após abrir o gerenciador de eventos, vá em Configurações, em seguida Criar lista de permissão, conforme imagem abaixo. **(Opcional)**
+* Após abrir o gerenciador de eventos, vá em Configurações, em seguida Criar lista de permissão, conforme imagem abaixo. **(Opcional)**
 
-5. Após clicar em criar lista de permissões, acrescente o domínio da xpague.com na lista de permissão. Não precisa adicionar subdomínios. **(Opcional)**
+* Após clicar em criar lista de permissões, acrescente o domínio da xpague.com na lista de permissão. Não precisa adicionar subdomínios. **(Opcional)**
 
-6. Agora pegue o token de acesso em Configurações » API de Conversões.
+* Agora pegue o token de acesso em Configurações » API de Conversões.
+
 
 ### Configurando em campanhas (afiliado e produtor)
 
