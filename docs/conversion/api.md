@@ -41,7 +41,7 @@ para seu pixel, mesmo que você não tenha como verificar o domínio.
 Saiba mais em: [Guia domínios confirmados Facebook]({% link docs/conversion/facebook.md %})
  
  
-### Para dar a permissão do domínio da XPague é bem simples, confira os passos:          
+**Para dar a permissão do domínio da XPague é bem simples, confira os passos:**
 
 * Primeiramente, acesse a página do facebook business e efetue o login em sua conta.         
 
