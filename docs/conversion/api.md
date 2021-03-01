@@ -47,36 +47,68 @@ Saiba mais em: [Guia domínios confirmados Facebook]({% link docs/conversion/fac
 
 * No menu principal, em configurações do negócio acesse Fonte de dados » Pixels.
 
+![Pixels](/assets/images/pixels.png)
+
 * Então, clique em Abrir no Gerenciador de Eventos localizado no canto superior direito.
+
+![Gerenciador](/assets/images/gerenciador.png)
 
 * Após abrir o gerenciador de eventos, vá em Configurações, em seguida Criar lista de permissão, conforme imagem abaixo. **(Opcional)**
 
+![Pixels](/assets/images/permissao.png)
+
 * Após clicar em criar lista de permissões, acrescente o domínio da xpague.com na lista de permissão. Não precisa adicionar subdomínios. **(Opcional)**
+
+![Pixels](/assets/images/permissao2.png)
 
 * Agora pegue o token de acesso em Configurações » API de Conversões.
 
 
+
+![Pixels](/assets/images/permissao3.png)
+
+* Após clicar em avançar você vai escolher o pixel desejado
+
+![Pixels](/assets/images/permissao5.png)
+
+* Após escolher o pixel clique em avançar e copie o token do pixel
+
+![Pixels](/assets/images/permissao4.png)
+
+Guarde o token em um lugar seguro, pois o facebook só permite o uso de um token por vez, caso perca esse terá que gerar outro!
+
+
 ### Configurando em campanhas (afiliado e produtor)
 
-* Ao clicar no botão será gerado um código que não será salvo pelo Facebook, portanto copie o conteúdo e em seguida na página do produto, vá em Campanhas, escolha a campanha e clique em Editar, ou na hora de criar sua campanha insira o token, caso não esteja vendo o campo do token, clique no botão "Ver opções avançadas"
+Ao clicar no botão será gerado um código que não será salvo pelo Facebook, portanto copie o conteúdo e em seguida na página do produto.
+
+* Vá em Campanhas, escolha a campanha, clique em Editar e insira o token no campo 
+
+![Campanha](/assets/images/campanha1.png)
+
+* ou na hora de criar sua campanha insira o token.
+![Campanha](/assets/images/campanha3.png)
+
+
+ caso não esteja vendo o campo do token, clique no botão "Ver opções avançadas"
+ 
+ ![Campanha](/assets/images/campanha2.png)
 
 ### Configurando direto no produto (produtor)
+* vá em Checkout, abaixe a página você vai ver dois campos (Pixel de trackeamento facebook e Token de acesso da API de conversões do Facebook, insira o pixel e o token e pronto.
 
-Com essa regra o pixel fica inserido no produto, quando você realizar uma venda sem campanha automaticamente o pixel do produtor será inserido.
+![Produtor](/assets/images/apiprodutor1.png)
 
-* Ao clicar no botão será gerado um código que não será salvo pelo Facebook, portanto copie o conteúdo e em seguida na página do produto, vá em Checkout, abaixe a página você vai ver dois campos (Pixel de trackeamento facebook e Token de acesso da API de conversões do Facebook, insira o pixel e o token e pronto.
+**Com essa regra o pixel fica inserido no produto, quando você realizar uma venda sem campanha automaticamente o pixel do produtor será inserido.**
+
 
 ## Posso usar dois pixels ou mais como produtor ? 
 
 **SIM** ! Basta inserir uma vírgula separando seus pixels, lembrando que o token do pixel precisa ser separado por vírgulas também e na mesma ordem de inserção dos pixel
 
 Se você inseriu dois pixel eles devem estar separados por vírgulas e os tokens na mesma ordem, Exemplo: 
-```
 
-Pixel: 999992,999993
-Tokens: token999992,token999993
-
-```
+![Produtor](/assets/images/apiprodutor2.png)
 
 
 ## Precisa de alguma ajuda?
