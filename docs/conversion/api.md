@@ -102,13 +102,19 @@ Ao clicar no botão será gerado um código que não será salvo pelo Facebook, 
 **Com essa regra o pixel fica inserido no produto, quando você realizar uma venda sem campanha automaticamente o pixel do produtor será inserido.**
 
 
-## Posso usar dois pixels ou mais como produtor ? 
+## Posso usar dois pixels ou mais ? 
 
 **SIM** ! Basta inserir uma vírgula separando seus pixels, lembrando que o token do pixel precisa ser separado por vírgulas também e na mesma ordem de inserção dos pixel
 
-Se você inseriu dois pixel eles devem estar separados por vírgulas e os tokens na mesma ordem, Exemplo: 
+Se você inseriu dois pixel eles devem estar separados por vírgulas e os tokens na mesma ordem, veja nos exemplos abaixo. 
+
+**Exemplo produtor:** 
 
 ![Produtor](/assets/images/apiprodutor2.png)
+
+**Exemplo campanha:** 
+
+![Produtor](/assets/images/apiaff1.png)
 
 
 ## Precisa de alguma ajuda?
