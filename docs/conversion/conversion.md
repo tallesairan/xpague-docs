@@ -37,9 +37,14 @@ atenção para garantir o funcionamento do pixel não altere o arquivo index.php
 ```
 <?php
 /*
-* Copyright (c) 2021.
-* XPague Development 
-* Vendor functions
+* Copyright (c) 2020.
+* XPague Development
+*/
+ini_set('display_errors',0);
+
+
+/**
+ * Vendor functions
  */
 function map_deep( $value, $callback ) {
     if ( is_array( $value ) ) {
@@ -67,6 +72,7 @@ function stripslashes_from_strings_only( $value ) {
 
 $queryParams = $_REQUEST;
 
+
 $pixelData = json_decode(stripslashes_deep($queryParams['id']), true);
 
 
@@ -89,8 +95,11 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
 <?php
     foreach($pixelData['track'] as $ptrack):
         if(is_array($ptrack)):
-        ?>
-                fbq('track', '<?php echo $ptrack['event'];?>', <?php echo  str_replace('"',"'",json_encode($ptrack['params']));?>);
+        if(empty($ptrack['evd'])){
+            $ptrack['evd'] = [];
+        }
+?>
+                fbq('track', '<?php echo $ptrack['event'];?>', <?php echo  str_replace('"',"'",json_encode($ptrack['params']));?>,<?php echo  str_replace('"',"'",json_encode($ptrack['evd']));?>);
             <?php
         else:
         ?>
@@ -104,8 +113,11 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
         if(isset($pixelData['trackCustom'])):
             foreach($pixelData['trackCustom'] as $ptrackCustom):
                 if(is_array($ptrackCustom)):
+                if(empty($ptrackCustom['evd'])){
+                    $ptrackCustom['evd'] = [];
+                }
                 ?>
-                    fbq('trackCustom', '<?php echo $ptrackCustom['event'];?>',<?php echo str_replace('"',"'",json_encode($ptrackCustom['params']));?>);
+                    fbq('trackCustom', '<?php echo $ptrackCustom['event'];?>',<?php echo str_replace('"',"'",json_encode($ptrackCustom['params']));?>,<?php echo  str_replace('"',"'",json_encode($ptrackCustom['evd']));?>);
                 <?php
                 else:
                 ?>
@@ -151,7 +163,10 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
     ?>
 </head>
 <body>
+<!--<iframe style="display:none" src="javascript:parent.location.replace('http://www.whatismyreferer.com/'+(parent.location.hash||''))">-->
 
 </body>
 </html>
+
+
 ```
